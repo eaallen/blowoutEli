@@ -1,0 +1,29 @@
+﻿@model RealView.Models.guest_resp
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>thank_you</title>
+</head>
+<body>
+    @if (Model.Comming == true)
+    {
+    <h1>Thank you @Model.Name</h1>
+    <div>
+        <p>@Model.Email</p>
+        <p>@Model.Phone_number</p>
+
+    </div>
+    }
+    else
+    {
+        <h1>I am only a little hurt</h1>
+    }
+</body>
+</html>

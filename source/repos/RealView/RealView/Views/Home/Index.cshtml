@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+    
+<h2>Index</h2>
+welcome to my house
+the time is: @Html.Raw((int)ViewBag.time)
+the month is: @Html.Raw((string)ViewBag.month)
+
+@Html.ActionLink("RSVP HERE","rsvp_form") 
+    <br />
+@Html.ActionLink("go to edit", "mytest")
+
+
+
+
+

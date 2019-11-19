@@ -1,0 +1,72 @@
+﻿<head>
+    <link rel="stylesheet" href="~/Content/myStyle.css">
+
+</head>
+@{
+    ViewBag.Title = "Rentals";
+}
+
+<h2>Rentals</h2>
+
+<>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div id="Clarinet">
+
+                @Html.Raw((string)ViewBag.Clarinet) <br />
+                <a href="@Url.Action("Show_rental", "Home", "Clarinet")">
+                    <img src="~/Content/Images/Clarinet.jpg">
+                    <a />
+
+            </div>
+            <div id="Flute">
+                @Html.Raw((string)ViewBag.Flute)<br />
+                <a href="@Url.Action("Show_rental", "Home", ViewBag.Flute)">
+                    <img src="~/Content/Images/Flute.jpg" />
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4">
+            <div id="Sax">
+                @Html.Raw((string)ViewBag.Saxophone)<br />
+                <a href="@Url.Action("Show_rental", "Home", ViewBag.Saxophone)">
+                    <img src="~/Content/Images/Saxophone.jpg" />
+                </a>
+            </div>
+            <div id="Trombone">
+                @Html.Raw((string)ViewBag.Trombone)<br />
+                <a href="@Url.Action("Show_rental", "Home", ViewBag.Trombone)">
+                    <img src="~/Content/Images/Flute.jpg" />
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="col-md-4">
+            <div id="Trumpet">
+
+                @Html.Raw((string)ViewBag.Trumpet)<br />
+                <a href="@Url.Action("Show_rental", "Home", ViewBag.Trumpet)">
+                    <img src="~/Content/Images/trumpet.jpg" />
+                </a>
+            </div>
+            <div id="Tuba">
+
+                @Html.Raw((string)ViewBag.Tuba)<br />
+                <a href="@Url.Action("Show_rental", "Home", ViewBag.Tuba)">
+                    <img src="~/Content/Images/Tuba.jpg" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Midterm.Models.Media_Type>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .btn {
+        color: dodgerblue;
+    }
+</style>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "", new { @class = "btn btn-default" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Meida_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Meida_desc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Meida_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Meida_desc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.Meida_code  }, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+}
+
+</table>

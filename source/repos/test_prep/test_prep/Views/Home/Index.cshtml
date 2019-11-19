@@ -1,0 +1,87 @@
+﻿@model IEnumerable<test_prep.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Welcome</h2>
+<div>@Html.ActionLink("Create an account?", "create_account")</div>
+<div>  @Html.ActionLink("Shop", "IndexRsvp", "Buyer_c")</div>
+<div>  @Html.ActionLink("Sell", "Index", "Index")</div>
+<div>  @Html.ActionLink("Map", "Map_test", "Default")</div>
+
+@if (Model != null)
+{
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.d_Products)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Latitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Longitude)
+            </th>
+
+
+
+            <th></th>
+        </tr>
+    
+    
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User_ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.First_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Last_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone_number)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.d_Products)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Latitude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Longitude)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Add Product", "Product_test", new {  id=item.User_ID }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+    
+
+    </table>
+}

@@ -1,0 +1,42 @@
+﻿@model test_prep_2_midterm.Models.Expo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Expo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Expo_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expo_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Used)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Used)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.Expo_ID  }) |
+    @Html.ActionLink("Back to List", "View_it")
+</p>

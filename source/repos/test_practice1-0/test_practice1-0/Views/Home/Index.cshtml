@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="jumbotron">
+    @Html.ActionLink("About", "About")
+    <br />
+    @Html.ActionLink("Create a book", "Index", "Handel_book")
+    <br />
+    @Html.ActionLink("View Books", "Index", "View_book")
+    <br />
+    @Html.ActionLink("View only you are not ADMIN", "ViewOnly","View_only")
+</div>

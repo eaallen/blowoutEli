@@ -1,0 +1,52 @@
+﻿@model test_practice1_0.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <div class="jumbotron">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Book_ID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Book_ID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Page_number)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Page_number)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Author)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Author)
+            </dd>
+
+        </dl>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Book_ID }) |
+    @Html.ActionLink("Back to List", "View_list")
+</p>

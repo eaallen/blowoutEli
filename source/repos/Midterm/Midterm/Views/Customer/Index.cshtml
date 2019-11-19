@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Midterm.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style> 
+.btn {
+    color: dodgerblue;
+}
+</style>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create","", new { @class = "btn btn-default" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_first_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_last_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_first_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_Email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.Customer_Code  }, new { @class = "btn btn-default" })
+           
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+@model RealView.Models.guest_resp
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>rsvp_form</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(false,"", new { @class = "text-danger"})
+            <p>name @Html.TextBoxFor(x => x.Name)</p>
+            <p>email @Html.TextBoxFor(x=> x.Email)</p> 
+            <p>phone number @Html.TextBoxFor(x=>x.Phone_number)</p>
+            <p>
+                Are you comming? @Html.DropDownListFor(x => x.Comming, new[]{
+                    new SelectListItem()
+                    {Text = "yes I will be there", Value = bool.TrueString},
+                    new SelectListItem()
+                    { Text = "No sir", Value = bool.FalseString}
+                 })
+            </p>
+
+
+            <input type="submit" value="Submit RSVP" />
+        }
+
+    </div>
+</body>
+</html>

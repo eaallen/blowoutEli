@@ -1,0 +1,29 @@
+﻿@model firstsample.Models.guest_response
+
+@{
+    ViewBag.Title = "Thanks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<body>
+    <div>
+        <h1>Thank you @Model.Name</h1>
+        @if (Model.WillAttend == true)
+        {
+            <p>We look forward to seeing you</p>
+            <p>
+                your current infromation is: @Model.Name<br>
+                                             @Model.Phone<br>
+                                             @Model.Email
+                
+            </p>
+        }
+        else
+        {
+            <p>Hopefully next time you can make it</p>
+        }
+    </div>
+</body>
+

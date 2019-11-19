@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Show_rental";
+}
+
+<h2>Show_rental</h2>
+@if (ViewBag.info == "Clarinet")
+{
+    <p>here is the rental</p>
+    @Html.Raw((string)ViewBag.info)
+}
